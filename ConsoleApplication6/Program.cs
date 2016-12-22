@@ -85,9 +85,7 @@ namespace ConsoleApplication6
                 if (new Random().Next(1, 10) == 3) //message.Id > 45 && message.Id < 50)
                 {
                     Console.WriteLine($"{Context.Self.Path}: Failing iteration: {message.Id}");
-
-                    //Thread.Sleep(1000);
-
+                    
                     throw new ApplicationException(message.Id.ToString());
                 }
 
